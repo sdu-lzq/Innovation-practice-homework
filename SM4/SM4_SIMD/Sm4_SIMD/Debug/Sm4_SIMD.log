@@ -1,0 +1,5 @@
+﻿  Sm4_SIMD.cpp
+D:\Sophomore\innovation\Sm4_SIMD\Sm4_SIMD\Sm4_SIMD.cpp(102,18): warning C4018: “<”: 有符号/无符号不匹配
+D:\Sophomore\innovation\Sm4_SIMD\Sm4_SIMD\Sm4_SIMD.cpp(103,16): warning C4778: “printf”: 格式字符串“%”未终止
+D:\Sophomore\innovation\Sm4_SIMD\Sm4_SIMD\Sm4_SIMD.cpp(112,16): warning C4778: “printf”: 格式字符串“%”未终止
+  Sm4_SIMD.vcxproj -> D:\Sophomore\innovation\Sm4_SIMD\Debug\Sm4_SIMD.exe

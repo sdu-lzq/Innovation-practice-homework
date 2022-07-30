@@ -1,0 +1,3 @@
+﻿  Sm4_table.cpp
+D:\Sophomore\innovation\Sm4_table\Sm4_table\Sm4_table.cpp(105,16): warning C4778: “printf”: 格式字符串“%”未终止
+  Sm4_table.vcxproj -> D:\Sophomore\innovation\Sm4_table\Debug\Sm4_table.exe
