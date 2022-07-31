@@ -1,6 +1,6 @@
 ### Merkle Tree
 
-![image-20220730163720881](C:\Users\lc-lzq\AppData\Roaming\Typora\typora-user-images\image-20220730163720881.png)
+![image-20220730163720881](https://github.com/sdu-lzq/Innovation-practice-homework/blob/main/image/image-20220730163720881.png)
 
 Merkel树的实现原理如图，和哈希列表一样，把数据分成小的数据块，最下面的叶节点包含存储数据或其哈希值，非叶子节点（包括中间节点和根节点）都是它两个孩子节点内容的hash值。
 
@@ -97,4 +97,4 @@ def Exclusion_proof(element,Treenode,blocks):
 
 也可以用Generate_data随机对block数据进行生成，也可以改变block大小进行验证
 
-![image-20220730172926460](C:\Users\lc-lzq\AppData\Roaming\Typora\typora-user-images\image-20220730172926460.png)
+![image-20220730172926460](https://github.com/sdu-lzq/Innovation-practice-homework/blob/main/image/image-20220730172926460.png)
