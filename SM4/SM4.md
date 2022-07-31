@@ -167,7 +167,7 @@ void SM4_encryption(uint8_t* ciphertext) {
 
 ![image-20220730143943862](https://github.com/sdu-lzq/Innovation-practice-homework/blob/main/image/image-20220730143943862.png)
 
-![image-20220730145131205](https://github.com/sdu-lzq/Innovation-practice-homework/blob/main/image/image-20220730145131205.png)
+![image-20220730145131205](https://github.com/sdu-lzq/Innovation-practice-homework/blob/main/image/image-20220730145608565.png)
 
 ![image-20220730145117591](https://github.com/sdu-lzq/Innovation-practice-homework/blob/main/image/image-20220730145117591.png)
 
