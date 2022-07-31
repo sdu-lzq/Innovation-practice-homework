@@ -6,7 +6,7 @@
 
 首先按照官方文档中定义椭圆曲线参数，然后对基本运算进行实现
 
-![image-20220730174701260](C:\Users\lc-lzq\AppData\Roaming\Typora\typora-user-images\image-20220730174701260.png)
+![image-20220730174701260](https://github.com/sdu-lzq/Innovation-practice-homework/blob/main/image/image-20220730174701260.png)
 
 SM2 parameters:prime field
 
@@ -46,17 +46,17 @@ def On_curve(point):
 
 3.point_add 和point_double
 
-![image-20220730175101696](C:\Users\lc-lzq\AppData\Roaming\Typora\typora-user-images\image-20220730175101696.png)
+![image-20220730175101696](https://github.com/sdu-lzq/Innovation-practice-homework/blob/main/image/image-20220730175101696.png)
 
 4.Scalar multiplication
 
-![image-20220730175156850](C:\Users\lc-lzq\AppData\Roaming\Typora\typora-user-images\image-20220730175156850.png)
+![image-20220730175156850](https://github.com/sdu-lzq/Innovation-practice-homework/blob/main/image/image-20220730175156850.png)
 
 #### 加解密过程实现
 
 首先选择一个随机私钥k，然后在生成元G生成元，在循环群上生成公钥Pa = kG
 
-![image-20220730175607773](C:\Users\lc-lzq\AppData\Roaming\Typora\typora-user-images\image-20220730175607773.png)
+![image-20220730175607773](https://github.com/sdu-lzq/Innovation-practice-homework/blob/main/image/image-20220730175607773.png)
 
 加密过程如图所示，这里要用到KDF操作，我们在SM3文件中预先进行了实现
 
@@ -90,7 +90,7 @@ def KDF(z,klen):
 
 解密过程
 
-![image-20220730180636913](C:\Users\lc-lzq\AppData\Roaming\Typora\typora-user-images\image-20220730180636913.png)
+![image-20220730180636913](https://github.com/sdu-lzq/Innovation-practice-homework/blob/main/image/image-20220730180636913.png)
 
 ```python
 def encryption(M, Pk): 
@@ -204,7 +204,7 @@ def Verify(r,s,Za,m,Pa):
 
 原理如图
 
-![image-20220730194014679](C:\Users\lc-lzq\AppData\Roaming\Typora\typora-user-images\image-20220730194014679.png)
+![image-20220730194014679](https://github.com/sdu-lzq/Innovation-practice-homework/blob/main/image/image-20220730194014679.png)
 
 其中A和B通过交换信息计算出相同的密钥$K_{A}$和$K_{B}$
 
@@ -263,14 +263,14 @@ def Bob(Ra,Rb,rb):
 
 #### 结果验证
 
-加解密验证
+加解密验证(SM2_enc_dec.py)(字符串实现SM2(str_impl.py))
 
-![image-20220730203348800](C:\Users\lc-lzq\AppData\Roaming\Typora\typora-user-images\image-20220730203348800.png)
+![image-20220730203348800](https://github.com/sdu-lzq/Innovation-practice-homework/blob/main/image/image-20220730203348800.png)
 
-签名验签验证
+签名验签验证(SM2_sign.py)
 
-![image-20220730203458679](C:\Users\lc-lzq\AppData\Roaming\Typora\typora-user-images\image-20220730203458679.png)
+![image-20220730203458679](https://github.com/sdu-lzq/Innovation-practice-homework/blob/main/image/image-20220730203458679.png)
 
-密钥交换验证
+密钥交换验证(SM2_KeyEx.py)
 
-![image-20220730203537958](C:\Users\lc-lzq\AppData\Roaming\Typora\typora-user-images\image-20220730203537958.png)
+![image-20220730203537958](https://github.com/sdu-lzq/Innovation-practice-homework/blob/main/image/image-20220730203537958.png)
