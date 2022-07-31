@@ -23,7 +23,7 @@ def leaking_k(r,s,k):
 
 恢复原理如图 ，在使用相同k的情况下，我们直接使用推导公式就可以恢复出相应的私钥
 
-![image-20220730232958638](C:\Users\lc-lzq\AppData\Roaming\Typora\typora-user-images\image-20220730232958638.png)
+![image-20220730232958638](https://github.com/sdu-lzq/Innovation-practice-homework/blob/main/image/image-20220730232958638.png)
 
 ```python
 def reuse_k(Za,da,k):
@@ -40,7 +40,7 @@ def reuse_k(Za,da,k):
 
 不同的user使用相同的k进行签名计算，则对方就可以利用签名值对对方的私钥进行计算
 
-![image-20220730233222450](C:\Users\lc-lzq\AppData\Roaming\Typora\typora-user-images\image-20220730233222450.png)
+![image-20220730233222450](https://github.com/sdu-lzq/Innovation-practice-homework/blob/main/image/image-20220730233222450.png)
 
 在对方获取到签名值的情况下，可以使用推导公式进行计算
 
@@ -60,7 +60,7 @@ def reuse_k_users(Za,da,k):
 
 SM2签名算法和ECDSA签名算法如果使用相同的私钥和k，就可以通过ECDSA和SM2的签名值将私钥的值进行恢复
 
-![image-20220730234137003](C:\Users\lc-lzq\AppData\Roaming\Typora\typora-user-images\image-20220730234137003.png)
+![image-20220730234137003](https://github.com/sdu-lzq/Innovation-practice-homework/blob/main/image/image-20220730234137003.png)
 
 ```python
 def same_d_k(Za,sK,k):
@@ -76,4 +76,4 @@ def same_d_k(Za,sK,k):
 
 我们在main函数中已经对相应计算模块进行接入，可以直接进行运行
 
-![image-20220730234415240](C:\Users\lc-lzq\AppData\Roaming\Typora\typora-user-images\image-20220730234415240.png)
+![image-20220730234415240](https://github.com/sdu-lzq/Innovation-practice-homework/blob/main/image/image-20220730234415240.png)
