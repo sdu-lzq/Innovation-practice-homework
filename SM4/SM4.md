@@ -164,6 +164,7 @@ void SM4_encryption(uint8_t* ciphertext) {
 #### 代码运行和结果验证
 
 这里分别对相应代码进行运行即可
+
 1.SM4_basic
 ![image-20220730143943862](https://github.com/sdu-lzq/Innovation-practice-homework/blob/main/image/image-20220730143943862.png)
 2.SM4_table
