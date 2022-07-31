@@ -22,15 +22,13 @@ static meow_u128 xmm_setzero = _mm_setzero_si128(); //meow_u128  == _m128i
 #define palignr(A, B, i)    A = _mm_alignr_epi8(A, B, i)
 #define pand(A, B)          A = _mm_and_si128(A, B)
 #define aesdec(A, B)        A = _mm_aesdec_si128(A, B)
-
-
 #define invMixCol(A)		A = _mm_aesimc_si128(A) //ÄæÁÐ»ìºÏ
 #define MixCol(A)			A = _mm_aesdeclast_si128(A, xmm_setzero); \
 							A = _mm_aesenc_si128(A, xmm_setzero) 
+
+
+
 //inSR + inSB + SR + SB +MC = MC
-
-
-
 #define MEOW_INV_SHUFFLE(r0, r1, r2, r4, r5, r6) \
 pxor(r1, r2);         \
 inv_aesdec(r4, r1);   \
@@ -46,7 +44,7 @@ pxor(A, B);              \
 MixCol(A);           \
 aesenc(A, xmm_setzero);  \
 invMixCol(A)
-
+//xor+MC+SR+SB+MC+INMC = XOR+MC+SB+SR
 
 
 
