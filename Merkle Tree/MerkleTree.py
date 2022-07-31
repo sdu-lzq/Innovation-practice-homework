@@ -90,18 +90,18 @@ def Exclusion_proof(element,Treenode,blocks):
                 continue
     return 
 
+if __name__ == "__main__":
+    # blocks = Generate_data_block(10)
+    #可以调整规模进行生成
+    blocks = ['1','10','8','9','3','6']
+    for i in blocks:
+        print("TX{} value:{}".format(blocks.index(i),i))
+    Treenode = generate_Tree(blocks)
+    #print(Treenode)
+    print("对TX5的存在性证明")
+    Inclusion_Proof('6',Treenode)
 
-# blocks = Generate_data_block(10)
-#可以调整规模进行生成
-blocks = ['1','10','8','9','3','6']
-for i in blocks:
-    print("TX{} value:{}".format(blocks.index(i),i))
-Treenode = generate_Tree(blocks)
-#print(Treenode)
-print("对TX5的存在性证明")
-Inclusion_Proof('6',Treenode)
-
-Sort_blocks = sorted(blocks)
-Treenode2 = generate_Tree(Sort_blocks)
-print("证明一笔交易不存在性 value:4")
-Exclusion_proof('4',Treenode2,Sort_blocks)
+    Sort_blocks = sorted(blocks)
+    Treenode2 = generate_Tree(Sort_blocks)
+    print("证明一笔交易不存在性 value:4")
+    Exclusion_proof('4',Treenode2,Sort_blocks)
