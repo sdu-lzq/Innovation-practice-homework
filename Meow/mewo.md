@@ -2,7 +2,7 @@
 
 通过老师的讲解我们可以知道，由于Meow结构的可逆性，我们可以由message和Hash value推导出原有Key的值，要实现可逆，需要我们在结构上进行把握。
 
-<img src="C:\Users\lc-lzq\AppData\Roaming\Typora\typora-user-images\image-20220729231034484.png" alt="image-20220729231034484" style="zoom:50%;" />
+<img src="https://github.com/sdu-lzq/Innovation-practice-homework/blob/main/image/image-20220729231034484.png" style="zoom:50%;" />
 
 Meow中的AES是单轮的AES解密操作，并且有逆列混合，逆行移位，逆S盒还有异或密钥。
 
@@ -10,21 +10,21 @@ Meow中的AES是单轮的AES解密操作，并且有逆列混合，逆行移位�
 
 https://www.intel.com/content/www/us/en/docs/intrinsics-guide/index.html#ig_expand=262,280,267,272,262,6386,302&othertechs=AES&text=_mm_alignr_epi8&techs=SSSE3
 
-<img src="C:\Users\lc-lzq\AppData\Roaming\Typora\typora-user-images\image-20220729234243191.png" alt="image-20220729234243191" style="zoom:50%;" />
+<img src="https://github.com/sdu-lzq/Innovation-practice-homework/blob/main/image/image-20220729234243191.png" style="zoom:50%;" />
 
 这里是一次AES解密操作，我们可以看到进行了逆行移位，逆字节代换，逆列混淆，最后和key进行了异或
 
-<img src="C:\Users\lc-lzq\AppData\Roaming\Typora\typora-user-images\image-20220729233414079.png" alt="image-20220729233414079" style="zoom:50%;" />
+<img src="https://github.com/sdu-lzq/Innovation-practice-homework/blob/main/image/image-20220729233414079.png" style="zoom:50%;" />
 
 逆列混合操作
 
-<img src="C:\Users\lc-lzq\AppData\Roaming\Typora\typora-user-images\image-20220729233658127.png" alt="image-20220729233658127" style="zoom: 50%;" />
+<img src="https://github.com/sdu-lzq/Innovation-practice-homework/blob/main/image/image-20220729233658127.png" style="zoom: 50%;" />
 
 
 
 这里是对最后一轮的AES进行解密，可以看到进行了逆行移位操作，逆字节代换，然后进行了一次异或密钥。
 
-<img src="C:\Users\lc-lzq\AppData\Roaming\Typora\typora-user-images\image-20220729233740603.png" alt="image-20220729233740603" style="zoom:50%;" />
+<img src="https://github.com/sdu-lzq/Innovation-practice-homework/blob/main/image/image-20220729233740603.png" style="zoom:50%;" />
 
 aes加密运算
 
@@ -41,7 +41,7 @@ invMixCol(A)
 
 对Finalization的逆运算进行实现，我们首先先观察正向运算的图
 
-<img src="C:\Users\lc-lzq\AppData\Roaming\Typora\typora-user-images\image-20220730000226407.png" alt="image-20220730000226407" style="zoom:50%;" />
+<img src="https://github.com/sdu-lzq/Innovation-practice-homework/blob/main/image/image-20220730000226407.png" style="zoom:50%;" />
 
 要实现逆向运算要从下向上进行
 
@@ -57,7 +57,7 @@ inv_aesdec(r1, r5);
 
 在头文件中我们可以看到MEOW_MIX_REG的操作，下面我们也要将其进行逆向，这里只需要将操作进行逆使用即可
 
-<img src="C:\Users\lc-lzq\AppData\Roaming\Typora\typora-user-images\image-20220731003909980.png" alt="image-20220731003909980" style="zoom:50%;" />
+<img src="https://github.com/sdu-lzq/Innovation-practice-homework/blob/main/image/image-20220730114945980.png" style="zoom:50%;" />
 
 ```c
 #define MEOW_MIX_REG(r1, r2, r3, r4, r5,  i1, i2, i3, i4) \
@@ -204,4 +204,4 @@ static void INVMeowHash(meow_umm Len, void* HashMsg, void* msg, void* Key_buffer
 
 我们利用代码获取Key，并将Key代入正向Hash验证值
 
-![image-20220731005052206](C:\Users\lc-lzq\AppData\Roaming\Typora\typora-user-images\image-20220731005052206.png)
+![image-20220731005052206](https://github.com/sdu-lzq/Innovation-practice-homework/blob/main/image/image-20220731005052206.png)
