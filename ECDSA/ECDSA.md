@@ -126,4 +126,4 @@ def Deduce2(sign,msg):
 
 这里我们直接运行代码对结果进行验证，但在运行过程中我们发现会由一定概率恢复错误的密钥值
 
-![image-20220730222530055](C:\Users\lc-lzq\AppData\Roaming\Typora\typora-user-images\image-20220730222530055.png)
+![image-20220730222530055](https://github.com/sdu-lzq/Innovation-practice-homework/blob/main/image/image-20220730222530055.png)
