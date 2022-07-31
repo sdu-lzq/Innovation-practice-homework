@@ -4,7 +4,7 @@ Forge signature when the signed message is not checked
 
 我们这里获取了一个有效的签名$\sigma$利用私钥d进行签名，然后伪造一个消息签名
 
-![image-20220731000115394](C:\Users\lc-lzq\AppData\Roaming\Typora\typora-user-images\image-20220731000115394.png)
+![image-20220731000115394](https://github.com/sdu-lzq/Innovation-practice-homework/blob/main/image/image-20220731000115394.png)
 
 ```python
 def Forge(pK):
@@ -26,4 +26,4 @@ def Forge(pK):
 
 直接运行代码进行验证
 
-![image-20220731001128592](C:\Users\lc-lzq\AppData\Roaming\Typora\typora-user-images\image-20220731001128592.png)
+![image-20220731001128592](https://github.com/sdu-lzq/Innovation-practice-homework/blob/main/image/image-20220731001128592.png)
