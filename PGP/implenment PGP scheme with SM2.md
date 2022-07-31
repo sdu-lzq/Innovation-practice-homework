@@ -10,7 +10,7 @@ PGP是混合加密系统
 
 3.接收方对会话密钥用SM2私钥解密，用会话密钥对data解密获取最终的data
 
-![image-20220730210947314](C:\Users\lc-lzq\AppData\Roaming\Typora\typora-user-images\image-20220730210947314.png)
+![image-20220730210947314](https://github.com/sdu-lzq/Innovation-practice-homework/blob/main/image/image-20220730210947314.png)
 
 #### 代码实现
 
@@ -61,4 +61,4 @@ def PGP_Receive(d,ciphertext,cipherkey,length,lenx):
 
 也可以对代码进行修改，采用随机生成K而不适用密钥交换协议实现
 
-![image-20220730215008477](C:\Users\lc-lzq\AppData\Roaming\Typora\typora-user-images\image-20220730215008477.png)
+![image-20220730215008477](https://github.com/sdu-lzq/Innovation-practice-homework/blob/main/image/image-20220730215008477.png)
