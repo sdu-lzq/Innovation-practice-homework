@@ -65,12 +65,18 @@ KDF全称（Key derivation function） 密钥导出函数。密码学中，密�
 具体步骤如下
 
 a) 初始化一个 32 比特构成的计数器 $c t=0 \times 00000001$;
+
 b) 对 $i$ 从 1 到 $[k l e n / v]$ 执行：
+
 b.1) 计算 $H a_{i}=H_{v}(\mathrm{Z} \| c t)$;
+
 b. 2) $c t^{++}$;
+
 c) 若 $k l e n / v$ 是整数, 令 $H a !\lceil\mathrm{klm} / \mathrm{v}\rceil=H a\lceil\mathrm{klm} / \mathrm{v}\rceil$,
 否则令 $H a !\lceil$ klen/v $\rceil$ 为 $H a\lceil k l e n / v\rceil$ 最左边的 $(k l e n-(v \times\lfloor k l e n / v\rfloor))$ 比特；
+
 d) 令 $K=H a_{1}\left\|H a_{2}\right\| \cdots\left\|H a\lceil\mathrm{ken} / v\rceil_{-1}\right\| H a !\lceil\mathrm{Hem} / v\rceil$ 。
+
 
 ```python
 def KDF(z,klen):
