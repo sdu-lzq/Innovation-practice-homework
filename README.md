@@ -16,19 +16,19 @@ The repository uses for the homework.
 
 > <font color=green>**SM3_birthday_attack**</font>
 >
-> ([Innovation-practice-homework/SM3_birthday_attack at main · sdu-lzq/Innovation-practice-homework (github.com)](https://github.com/sdu-lzq/Innovation-practice-homework/tree/main/SM3_birthday_attack))
+> [Innovation-practice-homework/SM3_birthday_attack at main · sdu-lzq/Innovation-practice-homework (github.com)](https://github.com/sdu-lzq/Innovation-practice-homework/tree/main/SM3_birthday_attack)
 
 2.implement the Rho method of reduced SM3
 
 ><font color=green >**implenment the Rho sm3**</font>
 >
->[Innovation-practice-homework/implenment the Rho sm3 at main · sdu-lzq/Innovation-practice-homework (github.com)](https://github.com/sdu-lzq/Innovation-practice-homework/tree/main/implenment the Rho sm3)
+>[Innovation-practice-homework/implenment the Rho sm3 at main · sdu-lzq/Innovation-practice-homework (github.com)](https://github.com/sdu-lzq/Innovation-practice-homework/tree/main/implenment_the_Rho_sm3)
 
 3.implement length extension attack for SM3, SHA256, etc
 
 ><font color=green>**SM3 length extension attack**</font>
 >
->[Innovation-practice-homework/SM3 length extension attack at main · sdu-lzq/Innovation-practice-homework (github.com)](https://github.com/sdu-lzq/Innovation-practice-homework/tree/main/SM3 length extension attack)
+>[Innovation-practice-homework/SM3 length extension attack at main · sdu-lzq/Innovation-practice-homework (github.com)](https://github.com/sdu-lzq/Innovation-practice-homework/tree/main/SM3_length_extension_attack)
 
 4.do your best to optimize SM3 implementation (software)
 
@@ -40,7 +40,7 @@ The repository uses for the homework.
 
 ><font color=green>**Merkle Tree**</font>
 >
->[Innovation-practice-homework/Merkle Tree at main · sdu-lzq/Innovation-practice-homework (github.com)](https://github.com/sdu-lzq/Innovation-practice-homework/tree/main/Merkle Tree)
+>[Innovation-practice-homework/Merkle Tree at main · sdu-lzq/Innovation-practice-homework (github.com)](https://github.com/sdu-lzq/Innovation-practice-homework/tree/main/Merkle_Tree)
 
 6.report on the application of this deduce technique in Ethereum with ECDSA
 
@@ -52,7 +52,7 @@ The repository uses for the homework.
 
 ><font color=green>**impl sm2**</font>
 >
->[Innovation-practice-homework/impl sm2 at main · sdu-lzq/Innovation-practice-homework (github.com)](https://github.com/sdu-lzq/Innovation-practice-homework/tree/main/impl sm2)
+>[Innovation-practice-homework/impl sm2 at main · sdu-lzq/Innovation-practice-homework (github.com)](https://github.com/sdu-lzq/Innovation-practice-homework/tree/main/impl_sm2)
 
 8.verify the above pitfalls with proof-of-concept cod
 
