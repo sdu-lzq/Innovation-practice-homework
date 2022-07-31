@@ -50,4 +50,4 @@ def birthday_attack(bitnumber:int):
 
 可以直接对攻击代码进行运行
 
-![image-20220730154045901](C:\Users\lc-lzq\AppData\Roaming\Typora\typora-user-images\image-20220730154045901.png)
+![image-20220730154045901](https://github.com/sdu-lzq/Innovation-practice-homework/blob/main/image/image-20220730154045901.png)
