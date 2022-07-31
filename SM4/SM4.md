@@ -3,6 +3,7 @@
 [www.gmbz.org.cn/main/viewfile/20180108015408199368.html](http://www.gmbz.org.cn/main/viewfile/20180108015408199368.html)
 
 加解密运算
+
 1.首先将输入的128bit明文分成 4个32bit的数据$x_{0},x_{1},x_{2},x_{3}$,并作32轮轮变换.
 
 2.$x_{i}$暂时不做处理，将$x_{i+1},x_{i+2},x_{i+3}$和轮密钥$rk_{i}$异或得到一个32bit都数据，作为S盒变换的输入.
