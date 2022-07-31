@@ -53,4 +53,4 @@ def length_extend_attack(_m,length_old):
 
 #### 验证结果
 
-![image-20220730162458590](C:\Users\lc-lzq\AppData\Roaming\Typora\typora-user-images\image-20220730162458590.png)
+![image-20220730162458590](https://github.com/sdu-lzq/Innovation-practice-homework/blob/main/image/image-20220730162458590.png)
