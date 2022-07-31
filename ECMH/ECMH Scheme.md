@@ -10,6 +10,6 @@
 
 结果验证直接对代码进行执行
 
-这里ECMH具有同态性和可交换性，我们进行了验证
+这里ECMH结构决定它具有同态性和可交换性，我们进行了验证
 
-![image-20220730205250446](C:\Users\lc-lzq\AppData\Roaming\Typora\typora-user-images\image-20220730205250446.png)
+![image-20220730205250446](https://github.com/sdu-lzq/Innovation-practice-homework/blob/main/image/image-20220730205250446.png)
