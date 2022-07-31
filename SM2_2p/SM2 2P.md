@@ -4,7 +4,7 @@
 
 两方用各自生成的公私钥进行消息交换共同签名,具体流程如图
 
-![image-20220730224717526](C:\Users\lc-lzq\AppData\Roaming\Typora\typora-user-images\image-20220730224717526.png)
+![image-20220730224717526](https://github.com/sdu-lzq/Innovation-practice-homework/blob/main/image/image-20220730224717526.png)
 
 ```python
 def Sign(msg):
@@ -44,7 +44,7 @@ def Sign(msg):
 
 双方用共同参与形成的密钥对对消息进行加密，然后一方在不泄露自身私钥的前提下，进行消息交换，让另一方能够成功对消息进行解密，具体过程如图：
 
-![image-20220730230106205](C:\Users\lc-lzq\AppData\Roaming\Typora\typora-user-images\image-20220730230106205.png)
+![image-20220730230106205](https://github.com/sdu-lzq/Innovation-practice-homework/blob/main/image/image-20220730230106205.png)
 
 ```python
 def P2_enc_dec(M): 
@@ -93,8 +93,8 @@ def P2_enc_dec(M):
 
 对2P-Sign进行执行
 
-![image-20220730230706266](C:\Users\lc-lzq\AppData\Roaming\Typora\typora-user-images\image-20220730230706266.png)
+![image-20220730230706266](https://github.com/sdu-lzq/Innovation-practice-homework/blob/main/image/image-20220730230706266.png)
 
 对2P-decrypt进行执行
 
-![image-20220730231603836](C:\Users\lc-lzq\AppData\Roaming\Typora\typora-user-images\image-20220730231603836.png)
+![image-20220730231603836](https://github.com/sdu-lzq/Innovation-practice-homework/blob/main/image/image-20220730231603836.png)
