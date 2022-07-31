@@ -96,6 +96,12 @@ The repository uses for the homework.
 
 [Innovation-practice-homework/Meow at main · sdu-lzq/Innovation-practice-homework (github.com)](https://github.com/sdu-lzq/Innovation-practice-homework/tree/main/Meow)
 
+15.(附加)do your best to optimize SM4 implementation
+
+<font color=green>**SM4**</font>
+
+[Innovation-practice-homework/SM4 at main · sdu-lzq/Innovation-practice-homework (github.com)](https://github.com/sdu-lzq/Innovation-practice-homework/tree/main/SM4)
+
 ##### 未完成project
 
 1.Try to Implement this scheme(below)
