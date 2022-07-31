@@ -7,7 +7,7 @@ using namespace std;
 
 
 #define INSTRUCTION_REORDER_BARRIER _ReadWriteBarrier()
-//_m128iÒ²¾ÍÊÇÎÒÃÇ½«Ëüµ±×÷Ò»¸ö128bitµÄÕûÊı½øĞĞÊ¹ÓÃ
+//_m128iä¹Ÿå°±æ˜¯æˆ‘ä»¬å°†å®ƒå½“ä½œä¸€ä¸ª128bitçš„æ•´æ•°è¿›è¡Œä½¿ç”¨
 static meow_u128 xmm_setzero = _mm_setzero_si128(); //meow_u128  == _m128i  
 #define prefetcht0(A)           _mm_prefetch((char *)(A), _MM_HINT_T0)
 #define movdqu(A, B)	    A = _mm_loadu_si128((__m128i *)(B))
@@ -22,7 +22,7 @@ static meow_u128 xmm_setzero = _mm_setzero_si128(); //meow_u128  == _m128i
 #define palignr(A, B, i)    A = _mm_alignr_epi8(A, B, i)
 #define pand(A, B)          A = _mm_and_si128(A, B)
 #define aesdec(A, B)        A = _mm_aesdec_si128(A, B)
-#define invMixCol(A)		A = _mm_aesimc_si128(A) //ÄæÁĞ»ìºÏ
+#define invMixCol(A)		A = _mm_aesimc_si128(A) //é€†åˆ—æ··åˆ
 #define MixCol(A)			A = _mm_aesdeclast_si128(A, xmm_setzero); \
 							A = _mm_aesenc_si128(A, xmm_setzero) 
 
@@ -36,7 +36,7 @@ psubq(r5, r6);        \
 pxor(r4, r6);         \
 psubq(r1, r5);        \
 inv_aesdec(r0, r4);
-//r1ºÍr2½øĞĞÒì»ò£¬½«r4½øĞĞÄæaesÔËËã£¬r1×÷ÎªÂÖÃÜÔ¿£¬r5,r6½øĞĞÏà¼ÓµÄÄæÔËËã
+//r1å’Œr2è¿›è¡Œå¼‚æˆ–ï¼Œå°†r4è¿›è¡Œé€†aesè¿ç®—ï¼Œr1ä½œä¸ºè½®å¯†é’¥ï¼Œr5,r6è¿›è¡Œç›¸åŠ çš„é€†è¿ç®—
 
 
 #define inv_aesdec(A, B) \
@@ -76,7 +76,7 @@ static void INVMeowHash(meow_umm Len, void* HashMsg, void* msg, void* Key_buffer
 
 	meow_u128 xmm0, xmm1, xmm2, xmm3, xmm4, xmm5, xmm6, xmm7;// NOTE(casey): xmm0-xmm7 are the hash accumulation lanes
 	meow_u128 xmm8, xmm9, xmm10, xmm11, xmm12, xmm13, xmm14, xmm15;// NOTE(casey): xmm8-xmm15 hold values to be appended (residual, length)
-	//ÕâÀïÎÒÃÇÖ»ĞèÒªÊ¹ÓÃhashmsg
+	//è¿™é‡Œæˆ‘ä»¬åªéœ€è¦ä½¿ç”¨hashmsg
 	meow_u8* rcx = (meow_u8*)HashMsg;
 	movdqu(xmm0, rcx + 0x00); 
 	movdqu(xmm1, rcx + 0x10); 
@@ -86,12 +86,12 @@ static void INVMeowHash(meow_umm Len, void* HashMsg, void* msg, void* Key_buffer
 	movdqu(xmm5, rcx + 0x50); 
 	movdqu(xmm6, rcx + 0x60); 
 	movdqu(xmm7, rcx + 0x70); 
-	//½«hashmsg×°ÈëÏàÓ¦µÄ128bitÄÚÈİÖĞ£¬ÏàÓ¦Ò»¸öÊÇ16×Ö½Ú
+	//å°†hashmsgè£…å…¥ç›¸åº”çš„128bitå†…å®¹ä¸­ï¼Œç›¸åº”ä¸€ä¸ªæ˜¯16å­—èŠ‚
 
 	INV_Squeeze(xmm0, xmm1, xmm2, xmm3, xmm4, xmm5, xmm6, xmm7);
-	//ÏÈ½øĞĞSqueezeµÄÄæ²Ù×÷
+	//å…ˆè¿›è¡ŒSqueezeçš„é€†æ“ä½œ
 
-	//Finalization ¸ù¾İ½á¹¹Ïàµ±Ã¿´Î½«Öµ×óÒÆÒ»¸ö£¬½øĞĞ12ÂÖ
+	//Finalization æ ¹æ®ç»“æ„ç›¸å½“æ¯æ¬¡å°†å€¼å·¦ç§»ä¸€ä¸ªï¼Œè¿›è¡Œ12è½®
 	MEOW_INV_SHUFFLE(xmm3, xmm4, xmm5, xmm7, xmm0, xmm1);//3,4,5,6,7,0,1,2
 	MEOW_INV_SHUFFLE(xmm2, xmm3, xmm4, xmm6, xmm7, xmm0);
 	MEOW_INV_SHUFFLE(xmm1, xmm2, xmm3, xmm5, xmm6, xmm7);
@@ -106,7 +106,7 @@ static void INVMeowHash(meow_umm Len, void* HashMsg, void* msg, void* Key_buffer
 	MEOW_INV_SHUFFLE(xmm0, xmm1, xmm2, xmm4, xmm5, xmm6);//0,1,2,3,4,5,6,7
 	
 	
-	//Ê×ÏÈÓÃ0¶ÔÏàÓ¦ÄÚ´æ½øĞĞ³õÊ¼»¯
+	//é¦–å…ˆç”¨0å¯¹ç›¸åº”å†…å­˜è¿›è¡Œåˆå§‹åŒ–
 	pxor_clear(xmm8, xmm8);
 	pxor_clear(xmm9, xmm9);
 	pxor_clear(xmm10, xmm10);
@@ -118,7 +118,7 @@ static void INVMeowHash(meow_umm Len, void* HashMsg, void* msg, void* Key_buffer
 
 	meow_u8* Last = (meow_u8*)msg + (Len & ~0xf);
 
-	//¶Ômsg½øĞĞ´¦Àí
+	//å¯¹msgè¿›è¡Œå¤„ç†
 	int unsigned Len8 = (Len & 0xf);
 	if (Len8) {
 
@@ -146,14 +146,14 @@ static void INVMeowHash(meow_umm Len, void* HashMsg, void* msg, void* Key_buffer
 
 	
 	//r4-1 i4-10 r5-2 i3-01 r2-4 i2-00 r3-6 i1-0f r1-0 
-	//1,2,3,4,5,6,7,0°´ÕÕÕâ¸öË³Ğò½øĞĞÊäÈë£¬¼Ä´æÆ÷×îºóÊä³öµÄË³Ğò
+	//1,2,3,4,5,6,7,0æŒ‰ç…§è¿™ä¸ªé¡ºåºè¿›è¡Œè¾“å…¥ï¼Œå¯„å­˜å™¨æœ€åè¾“å‡ºçš„é¡ºåº
 	MEOW_INV_MIX_REG(xmm1, xmm5, xmm7, xmm2, xmm3, xmm12, xmm13, xmm14, xmm15);
 	MEOW_INV_MIX_REG(xmm0, xmm4, xmm6, xmm1, xmm2, xmm8, xmm9, xmm10, xmm11);
-	//ÔÙ½øĞĞÒ»ÂÖ£¬È·¶¨Ê£ÏÂµÄÃÜÔ¿Öµ,ÕâÀïÄæĞòÖ´ĞĞ
+	//å†è¿›è¡Œä¸€è½®ï¼Œç¡®å®šå‰©ä¸‹çš„å¯†é’¥å€¼,è¿™é‡Œé€†åºæ‰§è¡Œ
 	// NOTE(casey): To maintain the mix-down pattern, we always Meow Mix the less-than-32-byte residual, even if it was empty
 	 // NOTE(casey): Append the length, to avoid problems with our 32-byte padding
 
-	/*ÕıÏò½øĞĞ
+	/*æ­£å‘è¿›è¡Œ
 	*     // NOTE(casey): To maintain the mix-down pattern, we always Meow Mix the less-than-32-byte residual, even if it was empty
     MEOW_MIX_REG(xmm0, xmm4, xmm6, xmm1, xmm2, xmm8, xmm9, xmm10, xmm11);
 
@@ -181,7 +181,7 @@ int main() {
 	const char* msg = "LiZhuoqun_202000460041";
 	const char* Hash_value = "sdu_cst_20220610";
 
-	//ÏÈ¶ÔÏûÏ¢½øĞĞ´¦Àí  
+	//å…ˆå¯¹æ¶ˆæ¯è¿›è¡Œå¤„ç†  
 	int Hash_len = strlen(Hash_value);
 	char* Hashed_message = new char[Hash_len + 1];
 	memset(Hashed_message, 0, Hash_len + 1);
@@ -206,6 +206,6 @@ int main() {
 	memset(Hash_con, 0, 20);
 	movdqu_mem(Hash_con, Hash_verify);
 	printf("\n\n");
-	printf("½«Key´øÈë¼ÓÃÜ½øĞĞÑéÖ¤£¬µÃµ½µÄHash valueÎª£º%s", Hash_con);
+	printf("å°†Keyå¸¦å…¥åŠ å¯†è¿›è¡ŒéªŒè¯ï¼Œå¾—åˆ°çš„Hash valueä¸ºï¼š%s", Hash_con);
 	return 0;
 }
