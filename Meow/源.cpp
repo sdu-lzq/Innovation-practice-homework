@@ -182,23 +182,18 @@ int main() {
 	const char* Hash_value = "sdu_cst_20220610";
 
 	//先对消息进行处理  
-	int msglen = strlen(msg); 
-	char* message = new char[msglen + 1];
-	memset(message, 0, msglen + 1);
-	memcpy(message, msg, msglen);
-
 	int Hash_len = strlen(Hash_value);
 	char* Hashed_message = new char[Hash_len + 1];
 	memset(Hashed_message, 0, Hash_len + 1);
 	memcpy(Hashed_message, Hash_value, Hash_len);
-
-	meow_u8 KeyBuffer[128];
+	int msglen = strlen(msg); 
+	char* message = new char[msglen + 1];
+	memset(message, 0, msglen + 1);
+	memcpy(message, msg, msglen);
+	unsigned char KeyBuffer[128];
 	memset(KeyBuffer, 0, 128);
 	INVMeowHash(msglen, Hashed_message, message, KeyBuffer);
-
-
 	cout << "The message is:" << message<<endl;
-
 	printf("%s\n\t", "Key: ");
 	for (int i = 0; i < 128; i++) {
 		printf("%02X", (int)KeyBuffer[i]);
@@ -206,7 +201,6 @@ int main() {
 			printf("\n\t");
 		}
 	}
-
 	meow_u128 Hash_verify = MeowHash(KeyBuffer, msglen, message);
 	unsigned char Hash_con[20];
 	memset(Hash_con, 0, 20);
