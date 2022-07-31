@@ -158,11 +158,11 @@ void SM4_encryption(uint8_t* ciphertext) {
 
 这里分别对相应代码进行运行即可
 
-![image-20220730143943862](C:\Users\lc-lzq\AppData\Roaming\Typora\typora-user-images\image-20220730143943862.png)
+![image-20220730143943862](https://github.com/sdu-lzq/Innovation-practice-homework/blob/main/image/image-20220730143943862.png)
 
-![image-20220730145131205](C:\Users\lc-lzq\AppData\Roaming\Typora\typora-user-images\image-20220730145131205.png)
+![image-20220730145131205](https://github.com/sdu-lzq/Innovation-practice-homework/blob/main/image/image-20220730145131205.png)
 
-![image-20220730145117591](C:\Users\lc-lzq\AppData\Roaming\Typora\typora-user-images\image-20220730145117591.png)
+![image-20220730145117591](https://github.com/sdu-lzq/Innovation-practice-homework/blob/main/image/image-20220730145117591.png)
 
 最终优化结果和时间
 
