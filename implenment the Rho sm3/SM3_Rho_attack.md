@@ -24,4 +24,4 @@ def Rho(bitnumber):
 
 对代码直接进行运行，得到验证结果
 
-![image-20220730160402526](C:\Users\lc-lzq\AppData\Roaming\Typora\typora-user-images\image-20220730160402526.png)
+![image-20220730165807435]([C:\Users\lc-lzq\AppData\Roaming\Typora\typora-user-images\image-20220730165807435.png](https://github.com/sdu-lzq/Innovation-practice-homework/blob/main/image/image-20220730165807435.png))
