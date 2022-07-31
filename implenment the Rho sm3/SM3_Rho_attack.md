@@ -22,5 +22,5 @@ def Rho(bitnumber):
 
 
 
-对代码直接进行运行，得到验证结果
+对代码直接进行运行，得到验证结果,20bit攻击碰撞时间过长，这里以16bit碰撞为例
 ![image-20220730165807435](https://github.com/sdu-lzq/Innovation-practice-homework/blob/main/image/image-20220730165807435.png)
