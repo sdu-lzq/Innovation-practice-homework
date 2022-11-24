@@ -4,7 +4,7 @@ The repository uses for the homework.
 
 ### 小组成员
 
-202000460041 李卓群
+sdu lzq
 
 ### 项目汇总
 
